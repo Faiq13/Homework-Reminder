@@ -1,50 +1,71 @@
-# Welcome to your Expo app 👋
+# 📚 Homework Reminder
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Homework Reminder** adalah aplikasi mobile lintas platform (Android & iOS) yang dirancang khusus untuk membantu mahasiswa mengelola tenggat waktu (deadline) tugas kuliah dengan presisi tinggi. Berbeda dengan aplikasi to-do list biasa, aplikasi ini menggunakan strategi **Native Sync** untuk mengintegrasikan jadwal langsung ke kalender sistem dengan sistem pengingat berlapis.
 
-## Get started
+## ✨ Fitur Utama
 
-1. Install dependencies
+* **Precision Scheduling**: Input nama tugas, tanggal, hingga jam deadline yang spesifik menggunakan `DateTimePicker`.
+* **Defense in Depth (Multi-layered Alarms)**: Strategi pengingat 4 tahap:
+    * **H-2 (48 jam):** Persiapan awal dan riset data.
+    * **H-1 (24 jam):** Peringatan kritis untuk penyelesaian dokumen.
+    * **1 Jam Sebelum:** *Final check* dan persiapan pengiriman/upload.
+    * **On Time:** Notifikasi tepat saat waktu deadline berakhir.
+* **Native Calendar Sync**: Sinkronisasi otomatis ke Google Calendar atau Apple Calendar menggunakan **Native Intent** dan **Expo Calendar API**.
+* **Local Persistence**: Data tersimpan aman di penyimpanan lokal perangkat menggunakan `AsyncStorage`.
+* **One-tap Completion**: Fitur checklist instan untuk membersihkan daftar tugas yang sudah selesai.
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Tech Stack
 
-2. Start the app
+* **Framework**: [React Native](https://reactnative.dev/) dengan [Expo SDK](https://expo.dev/)
+* **Language**: [TypeScript](https://www.typescriptlang.org/) (Type-safe development)
+* **Native Modules**: 
+    * `expo-calendar` & `expo-intent-launcher` (Calendar Integration)
+    * `expo-notifications` (Internal Push Notifications)
+    * `@react-native-async-storage/async-storage` (Local DB)
+    * `@react-native-community/datetimepicker` (Input UI)
 
-   ```bash
-   npx expo start
-   ```
+## 📱 Version History & Changelog
 
-In the output, you'll find options to open the app in a
+### v3.0 (Latest Release - Final Implementation)
+* **Revisi Prosedur Deadline**: Menjawab kritik mengenai sistem pengingat yang terlalu mepet. Implementasi **Alarm Berlapis** (H-2, H-1, dan 1 jam sebelum).
+* **Logika Darurat**: Penambahan fitur "Tugas Dadakan" yang otomatis mengingatkan 2 jam setelah input jika deadline sangat dekat.
+* **Bug Fix**: Penanganan pergeseran waktu UTC pada sistem Android.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### v2.0 (Testing Version)
+* Integrasi awal `AsyncStorage`.
+* Sistem notifikasi tunggal (Hanya mengingatkan beberapa jam sebelum deadline).
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🚀 Cara Menjalankan (Local Development)
 
-## Get a fresh project
+1.  **Clone Repositori**
+    ```bash
+    git clone [https://github.com/Faiq13/Homework-Reminder.git](https://github.com/Faiq13/Homework-Reminder.git)
+    cd homework-reminder
+    ```
 
-When you're ready, run:
+2.  **Instal Dependensi**
+    ```bash
+    npm install
+    ```
 
-```bash
-npm run reset-project
-```
+3.  **Jalankan Project**
+    ```bash
+    npx expo start
+    ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+4.  **Preview**
+    Buka aplikasi **Expo Go** di Android/iOS dan scan QR Code yang muncul di terminal.
 
-## Learn more
+## 🤝 Kontribusi
 
-To learn more about developing your project with Expo, look at the following resources:
+Aplikasi ini bersifat **Open Source**. Kontribusi sangat diharapkan, terutama untuk pengembangan fitur di masa depan seperti:
+* Integrasi Cloud Database (Firebase/Supabase).
+* Visualisasi Statistik Tugas (Data Science Approach).
+* Kategorisasi mata kuliah berdasarkan warna.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📄 Lisensi
 
-## Join the community
+Didistribusikan di bawah **MIT License**. Lihat file [LICENSE](https://github.com/Faiq13/Homework-Reminder/blob/main/LICENSE) untuk informasi lebih lanjut.
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+**Developed by [Faiq](https://github.com/Faiq13)** *Mahasiswa Sains Data - Pekalongan, Indonesia*
