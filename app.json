@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "homework-reminder",
+    "slug": "homework-reminder",
+    "version": "1.0.0",
+    "android": {
+      "package": "com.mulfan.homeworkreminder"
+    }
+  }
+}
