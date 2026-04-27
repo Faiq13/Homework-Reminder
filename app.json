@@ -4,7 +4,9 @@
     "slug": "homework-reminder",
     "version": "1.0.0",
     "android": {
-      "package": "com.mulfan.homeworkreminder"
-    }
+      "package": "com.mulfan.homeworkreminder",
+      "permissions": ["READ_CALENDAR", "WRITE_CALENDAR"]
+    },
+    "plugins": ["expo-calendar"]
   }
 }
