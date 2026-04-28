@@ -26,14 +26,15 @@
 
 ## 📱 Version History & Changelog
 
-### v3.0 (Latest Release - Final Implementation)
-* **Revisi Prosedur Deadline**: Menjawab kritik mengenai sistem pengingat yang terlalu mepet. Implementasi **Alarm Berlapis** (H-2, H-1, dan 1 jam sebelum).
-* **Logika Darurat**: Penambahan fitur "Tugas Dadakan" yang otomatis mengingatkan 2 jam setelah input jika deadline sangat dekat.
-* **Bug Fix**: Penanganan pergeseran waktu UTC pada sistem Android.
+### v4.0.0 (Latest Release - Final Implementation)
+* **Multi-layered Alarms**: Implementasi pertahanan berlapis (H-2, H-1, 2 Jam, dan 1 Jam sebelum deadline) berdasarkan evaluasi pengguna.
+* **Bulletproof Calendar Logic**: Algoritma pencarian kalender adaptif untuk mendeteksi akun Google/Primary secara otomatis di berbagai perangkat Android.
 
-### v2.0 (Testing Version)
-* Integrasi awal `AsyncStorage`.
-* Sistem notifikasi tunggal (Hanya mengingatkan beberapa jam sebelum deadline).
+### v3.0.0 (Beta - System Sync)
+* **Initial Calendar Sync**: Sinkronisasi pertama ke sistem Android, namun prosedur peringatan dinilai terlalu mepet (hanya 1 jam sebelum). *Telah direvisi pada v4.0.0.*
+
+### v1.0.0 - v2.0.0 (Foundation)
+* Integrasi UI dasar, `AsyncStorage`, dan `DateTimePicker`.
 
 ## 🚀 Cara Menjalankan (Local Development)
 
@@ -69,3 +70,11 @@ Didistribusikan di bawah **MIT License**. Lihat file [LICENSE](https://github.co
 
 ---
 **Developed by [Faiq](https://github.com/Faiq13)** *Mahasiswa Sains Data - Pekalongan, Indonesia*
+
+
+## 📱 Tampilan Aplikasi
+![Tampilan Aplikasi](assets/images/tampilan-aplikasi.jpeg)
+
+![Tampilan Aplikasi](assets/images/tampilan-aplikasi-tugas-selesai.jpeg)
+
+![Tampilan Aplikasi](assets/images/tampilan-aplikasi-kalender.jpeg)
